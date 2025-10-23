@@ -2,7 +2,7 @@ from sklearn.datasets import make_blobs
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.neighbors import KNeighborsClassifier
-from .knn import KNN
+from ..model.knn import KNN
 import numpy as np
 
 # tạo bộ dữ liệu 2 lớp dễ nhìn
