@@ -1,2 +1,0 @@
-# Navie bayes
-
