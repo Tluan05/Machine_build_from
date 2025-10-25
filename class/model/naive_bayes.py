@@ -8,13 +8,12 @@ class NaiveBayes:
         if not isinstance(X, np.ndarray):
             X = X.toarray()
 
-        # Lấy kích thước dữ liệu
+        
         so_mau, so_dac_trung = X.shape
         self._cac_nhan = np.unique(y)         
         so_lop = len(self._cac_nhan)
 
         
-        # _tong_tu_theo_lop[i, j] = tổng số lần đặc trưng j xuất hiện trong các mẫu thuộc lớp i
         self._tong_tu_theo_lop = np.zeros((so_lop, so_dac_trung), dtype=np.float64)
         # _so_mau_theo_lop[i] = số lượng mẫu thuộc lớp i
         self._so_mau_theo_lop = np.zeros(so_lop, dtype=np.float64)

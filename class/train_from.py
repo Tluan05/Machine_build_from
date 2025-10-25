@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix
 from model.logistics_model import Logistics_From_Scratch
-from model.KNN_model import KNN
+from model.naive_bayes import NaiveBayes
 
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -24,8 +24,8 @@ vectorizer = TfidfVectorizer(stop_words='english')
 X_train_vec = vectorizer.fit_transform(X_train)
 X_test_vec = vectorizer.transform(X_test)
 
-model = KNN()
-
+model = NaiveBayes()
+print(model)
 model.fit(X_train_vec, y_train)
 
 predict = model.predict(X_test_vec)
